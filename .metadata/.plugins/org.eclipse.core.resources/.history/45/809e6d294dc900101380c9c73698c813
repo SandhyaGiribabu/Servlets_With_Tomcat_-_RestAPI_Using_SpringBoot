@@ -1,0 +1,65 @@
+package Registration;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.*;
+import java.sql.*;
+
+
+/**
+ * Servlet implementation class register
+ */
+@WebServlet("/register")
+public class register extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public register() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.setContentType("text/html");
+
+		PrintWriter out = response.getWriter();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql:/localhost:3306/db","root","1234");
+			PreparedStatement ps = con.prepareStatement("select * from list");
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				out.println("<!DOCTYPE html><html><body>");
+				out.println("<p>" + rs.getString(id) + "</p>");
+				out.println("</body></html>")
+				
+				
+				
+			}
+			
+		}
+		
+		
+		
+	}
+		
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

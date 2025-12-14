@@ -1,0 +1,10 @@
+
+package com.example.demo;
+
+import com.example.demo.Repository;
+@Service
+
+public class Service{
+	private final Repository rep;
+	
+}

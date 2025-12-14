@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>HelloServletApp</display-name>
+
+    <!-- HelloServlet -->
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>HelloServlet.Hello</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <!-- CookieServlet -->
+    <servlet>
+        <servlet-name>CookieServlet</servlet-name>
+        <servlet-class>CookieServlet.CookieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieServlet</servlet-name>
+        <url-pattern>/cookie</url-pattern>
+    </servlet-mapping>
+
+    <!-- SessionServlet -->
+    <servlet>
+        <servlet-name>SessionServlet</servlet-name>
+        <servlet-class>SessionServlet.Session</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionServlet</servlet-name>
+        <url-pattern>/session</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome page -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>

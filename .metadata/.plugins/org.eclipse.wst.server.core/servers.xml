@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v11.0 Server at localhost (2)-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v11.0 Server at localhost (2)" name="Tomcat v11.0 Server at localhost (2)" runtime-id="Apache Tomcat v11.0 (4)" server-type="org.eclipse.jst.server.tomcat.110" server-type-id="org.eclipse.jst.server.tomcat.110" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="4">
+    <list key="modules" value0="ServletDemo::org.eclipse.jst.jee.server:ServletDemo::jst.web::6.0" value1="Practise::org.eclipse.jst.jee.server:Practise::jst.web::6.1"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v11.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v11.0 Server at localhost" name="Tomcat v11.0 Server at localhost" runtime-id="Apache Tomcat v11.0 (4)" server-type="org.eclipse.jst.server.tomcat.110" server-type-id="org.eclipse.jst.server.tomcat.110" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="6">
+    <list key="modules" value0="ServletDemo::org.eclipse.jst.jee.server:ServletDemo::jst.web::6.0" value1="ServletDB::org.eclipse.jst.jee.server:ServletDB::jst.web::6.1" value2="Practise::org.eclipse.jst.jee.server:Practise::jst.web::6.1" value3="demo::org.eclipse.jst.jee.server:demo::jst.web::6.1"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v11.0 Server at localhost (3)-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v11.0 Server at localhost (3)" name="Tomcat v11.0 Server at localhost (3)" runtime-id="Apache Tomcat v11.0 (4)" server-type="org.eclipse.jst.server.tomcat.110" server-type-id="org.eclipse.jst.server.tomcat.110" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="1">
+    <list key="modules" value0="demo::org.eclipse.jst.jee.server:demo::jst.web::6.1"/>
+  </server>
+</servers>

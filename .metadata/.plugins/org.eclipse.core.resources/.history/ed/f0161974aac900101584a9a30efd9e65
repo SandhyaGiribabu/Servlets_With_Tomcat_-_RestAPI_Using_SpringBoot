@@ -1,0 +1,103 @@
+package trial;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpSession;
+
+/**
+ * Servlet implementation class trial
+ */
+@WebServlet("/trial")
+public class trial extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public trial() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().println("hiiiii");
+//		//sessions
+//		HttpSession s = request.getSession();
+//		
+//		String resp = "";
+//		
+//		String username = (String) s.getAttribute("name");
+//		
+//		resp+=username + "" +s.getId();
+//		
+//		
+//	
+//		Cookie[] cook = request.getCookies();
+//		for (Cookie c : cook ) {
+//			if (c.getName().equals("color")) {
+//				resp+= c.getValue();
+//			}
+//		}
+//		response.getWriter().println(resp);
+		
+		HttpSession s = request.getSession();
+		
+		Cookie[] c = request.getCookies();
+		for (Cookie cook : c) {
+			response.getWriter().println(cook.getName());
+			response.getWriter().println(cook.getValue());
+		}
+		response.getWriter().println(s.getAttribute("name"));
+		
+		
+		
+		
+		
+		
+			
+				
+		
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+//		HttpSession s = request.getSession();
+//		
+//		
+//		
+//		String username = request.getParameter("username");
+//		s.setAttribute("name",username);
+//		Cookie c = new Cookie("color","green");
+//		
+//		response.addCookie(c);
+//		
+//		response.sendRedirect("/Practise/trial");
+		
+		HttpSession s = request.getSession();
+		String name = request.getParameter("name");
+		
+		Cookie c = new Cookie("color","green");
+		response.addCookie(c);
+		s.setAttribute("name",name);
+		response.sendRedirect("/Practise/trial");
+		
+		
+		
+	}
+
+}

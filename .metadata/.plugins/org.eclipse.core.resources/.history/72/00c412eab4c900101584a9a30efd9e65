@@ -1,0 +1,28 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Service;
+import com.example.demo.UserRepository;
+import java.util.*;
+
+@Service 
+
+public class UserService{
+	
+	private UserRepository rep ;
+	
+	
+	
+	public UserService(UserRepository repo) {
+		this.rep = repo;
+		
+	}
+	
+	public List<Entity> getAll(){
+		return rep.findAll();
+	}
+	
+	
+	
+	
+	
+}
